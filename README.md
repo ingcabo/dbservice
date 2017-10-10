@@ -1,2 +1,2 @@
-# NyxWebService
-Web Service Codeigniter REst
+# DBWebService
+Web Service Codeigniter Rest
