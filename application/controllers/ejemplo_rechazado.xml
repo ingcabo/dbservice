@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<response>
+	<control>154</control>
+	<cod_afiliacion>9932861</cod_afiliacion>
+	<factura>1265</factura>
+	<monto>1246755</monto>
+	<estado>R</estado>
+	<codigo>51</codigo>
+	<descripcion><![CDATA[FONDO INSUFICIENTE]]></descripcion>
+	<vtid>99328</vtid>
+	<seqnum>200</seqnum>
+	<authid></authid>
+	<authname>P-Banco</authname>
+	<tarjeta>493753******5119</tarjeta>
+	<referencia>69</referencia>
+	<terminal>99328</terminal>
+	<lote>1</lote>
+	<rifbanco>J-0111110-1</rifbanco>
+	<afiliacion>860084789</afiliacion>
+	<voucher><![CDATA[
+
+         
+
+ B A N C O
+
+                COMPRA 
+
+LABORATORIO DE PRUEBAS
+CHAGUARAMOS
+J-00343075-7
+
+860084789         99328
+FECHA      :01/03/2012  17:14:31
+NRO.CUENTA :493753******5119 'M'
+NRO.REF    :69  LOTE:1
+SECUENCIA  :200 
+CAJA       :A01
+
+TRANSACCION FALLIDA:
+SALDO INSUFICIENTE 
+
+ 
+
+          RIF:J-0111110-1
+
+]]></voucher>
+</response>
+

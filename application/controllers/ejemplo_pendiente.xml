@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<response>
+	<control>151</control>
+	<cod_afiliacion>123</cod_afiliacion>
+	<factura>1265</factura>
+	<monto>1246755</monto>
+	<estado>P</estado>
+	<codigo></codigo>
+	<descripcion><![CDATA[]]></descripcion>
+	<vtid></vtid>
+	<seqnum></seqnum>
+	<authid></authid>
+	<authname></authname>
+	<tarjeta></tarjeta>
+	<referencia></referencia>
+	<terminal></terminal>
+	<lote></lote>
+	<rifbanco></rifbanco>
+	<afiliacion></afiliacion>
+	<voucher><![CDATA[]]></voucher>
+</response>

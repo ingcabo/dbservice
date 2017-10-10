@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<response>
+	<control>153</control>
+	<cod_afiliacion>9932861</cod_afiliacion>
+	<factura>1265</factura>
+	<monto>1246755</monto>
+	<estado>A</estado>
+	<codigo>00</codigo>
+	<descripcion><![CDATA[TRANS. APROBADA]]></descripcion>
+	<vtid>99328</vtid>
+	<seqnum>199</seqnum>
+	<authid>805544</authid>
+	<authname>P-Banco</authname>
+	<tarjeta>453231******5168</tarjeta>
+	<referencia>68</referencia>
+	<terminal>99328</terminal>
+	<lote>1</lote>
+	<rifbanco>J-0111110-1</rifbanco>
+	<afiliacion>860084789</afiliacion>
+	<voucher><![CDATA[
+      ORIGINAL COMERCIO
+<UT>         DUPLICADO</UT>
+          B A N C O
+
+             COMPRA
+
+LABORATORIO DE PRUEBAS
+CHAGUARAMOS
+J-00343075-7
+
+860084789         99328
+FECHA      :01/03/2012  16:21:55
+NRO.CUENTA :453231******5168 'M'
+NRO.REF    :68  LOTE:1
+APROBACION :805544
+SECUENCIA  :199 
+CAJA       :A01
+
+MONTO BS.  :12.467,55
+
+FIRMA  :__________________
+
+C.I.   :__________________
+
+ ASUMO LA OBLIGACION DE PAGAR AL BANCO 
+    EMISOR DE ESTA TARJETA EL MONTO 
+   INDICADO EN ESTA NOTA DE CONSUMO 
+
+          RIF:J-00011110-1
+
+]]></voucher>
+<prueba>123456</prueba>
+</response>

@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php/$1 [L]
+ErrorDocument 404 /index.php
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+Header add Access-Control-Allow-Methods "get, PUT, POST, DELETE, OPTIONS"
+header add Access-Control-Request-Headers "key"
