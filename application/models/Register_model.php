@@ -1,17 +1,17 @@
 <?php
-/**
+/*
 * Created by JetBrains PhpStorm.
 * User: Israel
 * Date: 6/07/13
 * Time: 8:10
 * To change this template use File | Settings | File Templates.
 */
- 
+
 class Register_model extends CI_Model {
-    public function __construct(){
-        parent::__construct();
-    }
- 
+      public function __construct(){
+      parent::__construct();
+      }
+
     //guardamos la nueva api key en la tabla keys
     public function new_api_key($level,$ignore_limits,$is_private_key,$ip_addresses,$user_id)
     {
@@ -19,7 +19,7 @@ class Register_model extends CI_Model {
         $key = $this->generate_token();
         //comprobamos si existe
         $check_exists_key = $this->db->get_where("keys_app", array("key_id"   =>   $key));
- 
+
         //mientras exista la clave en la base de datos buscamos otra
         while($check_exists_key->num_rows() > 0){
             $key = "";
@@ -34,11 +34,11 @@ class Register_model extends CI_Model {
             "ip_addresses"  =>      $ip_addresses,
              "user_id"       =>      $user_id
         );
- 
+
         $this->db->insert("keys_app", $data);
         return $key;
     }
- 
+
     //función que genera una clave segura de 40 carácteres, este será nuestro generador de keys para la api
     //https://gist.github.com/jeffreybarke/5347572
     //autor jeffreybarke
@@ -56,7 +56,7 @@ class Register_model extends CI_Model {
         shuffle($chars);
         $num_chars = count($chars) - 1;
         $token = '';
- 
+
         //creamos una key de 40 carácteres
         for ($i = 0; $i < $len; $i++)
         {

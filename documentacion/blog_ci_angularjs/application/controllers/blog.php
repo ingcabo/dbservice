@@ -13,7 +13,7 @@ class Blog extends CI_Controller
 		$this->load->model("blog_model");
 	}
 
-	//en el index del controlador simplemente cargamos la vista template, 
+	//en el index del controlador simplemente cargamos la vista template,
 	//que es la que tiene toda la funcionalidad gracias a ng-view
 	public function index()
 	{
@@ -48,7 +48,7 @@ class Blog extends CI_Controller
                 $auth = $this->input->post("auth");
 
                 $authUser = $this->blog_model->authUser($username,$password,$auth);
-                
+
                 if($authUser !== false)
                 {
                 	if($auth === "login")
@@ -112,7 +112,7 @@ class Blog extends CI_Controller
         {
             $this->form_validation->set_rules('title', 'title', 'trim|required|xss_clean');
             $this->form_validation->set_rules('content', 'content', 'trim|required|xss_clean');
-            
+
             if($this->form_validation->run() == false)
             {
                 echo json_encode(array("respuesta" => "failedform"));
@@ -124,9 +124,9 @@ class Blog extends CI_Controller
                 $id = $this->input->post("id");
 
                 $updatePost = $this->blog_model->updatePost($id,$title,$content);
-                
+
                 if($updatePost)
-                {   
+                {
                     echo json_encode(array("respuesta" => "success"));
                 }
                 else
@@ -149,7 +149,7 @@ class Blog extends CI_Controller
             $this->form_validation->set_rules('title', 'title', 'trim|required|xss_clean');
             $this->form_validation->set_rules('content', 'content', 'trim|required|xss_clean');
             $this->form_validation->set_rules('user_id', 'user_id', 'trim|required|xss_clean');
-            
+
             if($this->form_validation->run() == false)
             {
                 echo json_encode(array("respuesta" => "failedform"));
@@ -161,9 +161,9 @@ class Blog extends CI_Controller
                 $user_id = $this->input->post("user_id");
 
                 $addPost = $this->blog_model->newPost($user_id,$title,$content);
-                
+
                 if($addPost)
-                {   
+                {
                     echo json_encode(array("respuesta" => "success"));
                 }
                 else

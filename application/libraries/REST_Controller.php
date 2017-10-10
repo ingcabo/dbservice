@@ -2284,19 +2284,16 @@ if ($this->config->item('rest_enable_keys') && $use_key && empty($this->rest->ke
      * @return bool TRUE the API key has access; otherwise, FALSE
      */
 
+
     public function key_expire(){
-
-         if ($this->config->item('rest_enable_keys') == true) {
-
-            $query =  $this->db->query('SELECT TIME_TO_SEC(TIMEDIFF(NOW(),(SELECT MAX(ult_acces) AS ult_acces FROM logs WHERE  api_key = "'.$this->rest->key.'"  AND response_code = 200))) as ult_acces');
+       if ($this->config->item('rest_enable_keys') == true) {
+            $query =  $this->db->query('SELECT TIME_TO_SEC(TIMEDIFF(NOW(),
+            (SELECT MAX(ult_acces) AS ult_acces FROM logs WHERE
+            api_key = "'.$this->rest->key.'"  AND response_code = 200))) as ult_acces');
             $result = $query->row('ult_acces');
-
         }else{
-
             $result =   $this->config->item('rest_time_keys_expire') + 5000;
-
-            }
-
+        }
     return   $result;
 
     }
