@@ -1,5 +1,4 @@
 <?php
-
 //debemos colocar esta línea para extender de REST_Controller
 require APPPATH.'/libraries/REST_Controller.php';
 
@@ -15,7 +14,6 @@ class Products extends REST_Controller{
 
 	public function index_get()
 	{
-
 		$criterio['activo'] = 1;
 		$data = $this->Model_products->get_many_by($criterio);
 		$this->response(array("status" =>"susses", "data"=> $data),200);
