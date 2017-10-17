@@ -11,7 +11,6 @@ class Model_products extends My_model{
         protected $before_update = array('update_timestamp');
 
         protected function remove_sensite_data($arg){
-        unset($arg['id']);
         unset($arg['activo']);
         unset($arg['create_timestamp']);
         unset($arg['update_timestamp']);
