@@ -16,7 +16,9 @@ class Products extends REST_Controller{
 	{
 		$criterio['activo'] = 1;
 		$data = $this->Model_products->get_many_by($criterio);
-		$this->response(array("status" =>"susses", "data"=> $data),200);
+		$this->response(array(
+			"status" =>"susses",
+			 "data"=> $data
+		 ),200);
 	}
-
 }
