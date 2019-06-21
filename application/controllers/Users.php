@@ -87,7 +87,7 @@ class Users extends REST_Controller
         $this->config->item('data') => $this->config->item('dataF')
       ), 404);
     }
-  } //fin user put
+  } //find user put
   // modificar usuario
   // metodo post
   // super usuario debera emviar em la url el id a actualizar

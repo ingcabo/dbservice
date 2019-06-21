@@ -10,8 +10,17 @@ class Model_products extends My_model{
         protected $before_create = array('prep_data');
         protected $before_update = array('update_timestamp');
 
+
+        public function get_manyby(){
+          $criterio['active'] = 1;
+      		$criterio['down'] = 0;
+          $data = $this->get_many_by($criterio);
+          return $data;
+        }
+
         protected function remove_sensite_data($arg){
-        unset($arg['activo']);
+        unset($arg['active']);
+        unset($arg['down']);
         unset($arg['create_timestamp']);
         unset($arg['update_timestamp']);
         return $arg;

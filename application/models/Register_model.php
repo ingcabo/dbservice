@@ -28,11 +28,11 @@ class Register_model extends CI_Model {
         //creamos el array con los datos
         $data = array(
             "key_id"           =>      $key,
-            "level"         =>      $level,
-            "ignore_limits" =>      $ignore_limits,
-            "is_private_key"=>      $is_private_key,
-            "ip_addresses"  =>      $ip_addresses,
-             "user_id"       =>      $user_id
+            "level"            =>      $level,
+            "ignore_limits"    =>      $ignore_limits,
+            "is_private_key"   =>      $is_private_key,
+            "ip_addresses"     =>      $ip_addresses,
+             "user_id"         =>      $user_id
         );
 
         $this->db->insert("keys_app", $data);

@@ -323,9 +323,9 @@ $config['rest_keys_table'] = 'keys_app';
 |   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 |
 */
-//$config['rest_enable_keys'] = true;
+$config['rest_enable_keys'] = false;
 
-$config['rest_enable_keys_false'] = false;
+//$config['rest_enable_keys_false'] = false;
 
 
 /*
@@ -385,8 +385,8 @@ $config['rest_key_name'] = 'key';
 rest_time_keys_expire , expresado en segundos la vida de la key
 
 
-se debe crear el Siguiente SP, y retornara el valor en segundos del ultimo acceso de la key a algun metodo cuyo 
-codigo respuesta sea 200, se tendria que realizar un desarrollo para mantener viva la key si es necesario, se consulta la 
+se debe crear el Siguiente SP, y retornara el valor en segundos del ultimo acceso de la key a algun metodo cuyo
+codigo respuesta sea 200, se tendria que realizar un desarrollo para mantener viva la key si es necesario, se consulta la
 tabla LOGS
 
 se debe tener la siguiente configuracion
@@ -396,7 +396,7 @@ DROP PROCEDURE IF EXISTS `verifica_times_key`$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `verifica_times_key`(IN  key_u VARCHAR(40))
 BEGIN
-   
+
     DECLARE last_run_time DATETIME; # esta variable guardara la fecha completa del ultimo acceso de la rest_key
     DECLARE current_run_time DATETIME DEFAULT NOW(); # este sera el ahora ya
     DECLARE seg INT; # este es el resultado expresado en segundos
@@ -408,8 +408,8 @@ BEGIN
     END IF;
     SET seg := (SELECT TIME_TO_SEC(TIMEDIFF(NOW(),last_run_time)));
     SELECT seg;
-    
-    
+
+
 END$$
 
 DELIMITER ;
